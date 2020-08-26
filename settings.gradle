@@ -1,0 +1,3 @@
+include ':clickevent'
+include ':app'
+rootProject.name = "ClickEventEffect"
