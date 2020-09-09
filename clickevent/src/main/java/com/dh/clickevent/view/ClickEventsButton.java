@@ -74,6 +74,7 @@ public class ClickEventsButton extends AppCompatButton {
     public OnClickListener mOnClickListener;
     @Override
     public void setOnClickListener(@Nullable OnClickListener l) {
+        super.setOnClickListener(l);
         mOnClickListener = l;
     }
 

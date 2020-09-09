@@ -67,6 +67,7 @@ public class ClickEventsImageButton extends AppCompatImageButton {
     public OnClickListener mOnClickListener;
     @Override
     public void setOnClickListener(@Nullable OnClickListener l) {
+        super.setOnClickListener(l);
         mOnClickListener = l;
     }
 

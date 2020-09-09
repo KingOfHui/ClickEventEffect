@@ -74,6 +74,7 @@ public class ClickEventsImageView extends AppCompatImageView {
     public OnClickListener mOnClickListener;
     @Override
     public void setOnClickListener(@Nullable OnClickListener l) {
+        super.setOnClickListener(l);
         mOnClickListener = l;
     }
 

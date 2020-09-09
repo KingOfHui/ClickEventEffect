@@ -91,9 +91,10 @@ public abstract class EventsAdapter {
                 break;
             case MotionEvent.ACTION_UP:
                 if(onClickListener != null && !isPointLeaveView && !isLongClick){
-                    createClick(view,onClickListener);
-                    SingleHandler.getInstance().postDelayed(mClickRunnable,CLICK_DURATION);
+//                    createClick(view,onClickListener);
+//                    SingleHandler.getInstance().postDelayed(mClickRunnable,CLICK_DURATION);
 //                    onClickListener.onClick(view);
+                    view.performClick();
                 }
                 //不能加break
             case MotionEvent.ACTION_CANCEL:
@@ -106,9 +107,6 @@ public abstract class EventsAdapter {
                     SingleHandler.getInstance().removeCallbacks(mLongClickRunnable);
                 }
                 break;
-        }
-        if (view instanceof ClickEventsLinearLayout) {
-//            ((ClickEventsLinearLayout) view).callSuperOnTouchEvent(event);
         }
         return true;
     }

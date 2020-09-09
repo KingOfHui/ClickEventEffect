@@ -77,6 +77,7 @@ public class ClickEventsConstraintLayout extends ConstraintLayout {
     public View.OnClickListener mOnClickListener;
     @Override
     public void setOnClickListener(@Nullable View.OnClickListener l) {
+        super.setOnClickListener(l);
         mOnClickListener = l;
     }
 

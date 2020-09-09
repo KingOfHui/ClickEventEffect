@@ -79,6 +79,7 @@ public class ClickEventsLinearLayout extends LinearLayout {
     public OnClickListener mOnClickListener;
     @Override
     public void setOnClickListener(@Nullable OnClickListener l) {
+        super.setOnClickListener(l);
         mOnClickListener = l;
     }
 

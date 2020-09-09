@@ -77,6 +77,7 @@ public class ClickEventsFrameLayout extends FrameLayout {
     public OnClickListener mOnClickListener;
     @Override
     public void setOnClickListener(@Nullable OnClickListener l) {
+        super.setOnClickListener(l);
         mOnClickListener = l;
     }
 

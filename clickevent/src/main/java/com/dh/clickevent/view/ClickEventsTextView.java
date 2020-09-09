@@ -70,10 +70,10 @@ public class ClickEventsTextView extends AppCompatTextView {
         return mEffectsProxy.getAdapter().onTouch(this,event,mOnClickListener,mOnLongClickListener);
     }
 
-
     public OnClickListener mOnClickListener;
     @Override
     public void setOnClickListener(@Nullable OnClickListener l) {
+        super.setOnClickListener(l);
         mOnClickListener = l;
     }
 
