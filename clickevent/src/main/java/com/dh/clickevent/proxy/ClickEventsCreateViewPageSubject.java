@@ -65,9 +65,7 @@ public class ClickEventsCreateViewPageSubject implements ClickEventsViewSubject 
         if (type != ClickEventsManager.NONE_TYPE) {//只要在View中设置了type，除非是none，否则不论全局何种模式，都优先根据type
             if (type == ClickEventsManager.RIPPLE_TYPE) {
                 view = parseTypeView(ClickEventsWholeType.RIPPLE, parent, name, context, attrs);
-            } else if (type == ClickEventsManager.RIPPLE_NORMAL_TYPE) {
-                view = parseTypeView(ClickEventsWholeType.RIPPLE_NORMAL, parent, name, context, attrs);
-            } else if (type == ClickEventsManager.STATE_TYPE) {
+            }else if (type == ClickEventsManager.STATE_TYPE) {
                 view = parseTypeView(ClickEventsWholeType.STATE, parent, name, context, attrs);
             } else if (type == ClickEventsManager.SHAKE_TYPE) {
                 view = parseTypeView(ClickEventsSingleType.SHAKE, parent, name, context, attrs);
@@ -200,7 +198,6 @@ public class ClickEventsCreateViewPageSubject implements ClickEventsViewSubject 
                 case RIPPLE:
                 case STATE:
                     return new EventStateAdapter(ClickEventsManager.getColorBean());
-                case RIPPLE_NORMAL:
             }
         }
         return new EventStateAdapter(ClickEventsManager.getColorBean());

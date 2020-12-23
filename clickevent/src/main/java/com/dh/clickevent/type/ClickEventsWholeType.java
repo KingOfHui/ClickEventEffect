@@ -5,5 +5,4 @@ public enum ClickEventsWholeType implements ClickEventsType {
     SCALE,          //为系统控件添加缩放效果
     RIPPLE,         //为系统控件添加点击水波纹效果
     STATE,          //为系统控件添加普通点击响应效果
-    RIPPLE_NORMAL,       //为系统控件添加点击水波纹效果,看起来正常快速一些
 }

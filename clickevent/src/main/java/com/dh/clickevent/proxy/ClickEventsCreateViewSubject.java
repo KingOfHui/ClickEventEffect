@@ -67,8 +67,6 @@ public class ClickEventsCreateViewSubject implements ClickEventsViewSubject {
                 view = parseTypeView(ClickEventsWholeType.STATE, parent, name, context, attrs);
             } else if (type == ClickEventsManager.SHAKE_TYPE) {
                 view = parseTypeView(ClickEventsSingleType.SHAKE, parent, name, context, attrs);
-            } else if (type == ClickEventsManager.RIPPLE_NORMAL_TYPE) {
-                view = parseTypeView(ClickEventsWholeType.RIPPLE_NORMAL, parent, name, context, attrs);
             } else {
                 view = parseTypeView(ClickEventsWholeType.SCALE, parent, name, context, attrs);
             }
@@ -210,7 +208,6 @@ public class ClickEventsCreateViewSubject implements ClickEventsViewSubject {
                     return new EventStateAdapter(ClickEventsManager.getColorBean());
                 case SCALE:
                 case RIPPLE:
-                case RIPPLE_NORMAL:
             }
         }
         return new EventStateAdapter(ClickEventsManager.getColorBean());

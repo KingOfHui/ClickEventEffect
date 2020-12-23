@@ -28,7 +28,6 @@ public class ClickEventsManager {
     public static final int RIPPLE_TYPE = 1;
     public static final int STATE_TYPE = 2;
     public static final int SHAKE_TYPE = 3;
-    public static final int RIPPLE_NORMAL_TYPE = 4;
 
     private static volatile ClickEventsManager mInstance;
     private static ClickEventsWholeType mClickEventsWholeType;
