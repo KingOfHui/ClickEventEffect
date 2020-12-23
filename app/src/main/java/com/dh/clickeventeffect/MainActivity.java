@@ -3,7 +3,6 @@ package com.dh.clickeventeffect;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.TextView;
 
 import com.dh.clickevent.ClickEventsManager;
@@ -18,18 +17,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         final TextView tv = findViewById(R.id.tv);
-        tv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.e("dhdhdh", "111");
-                tv.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Log.e("dhdhdh", "222");
-
-                    }
-                });
-            }
-        });
+        final TextView tv2 = findViewById(R.id.tv2);
+        tv.setOnClickListener(v -> Log.e("dhdhdh", "111"));
+        tv.performClick();
+        tv2.setOnClickListener(v -> tv.performClick());
     }
 }

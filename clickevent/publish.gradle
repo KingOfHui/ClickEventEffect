@@ -1,0 +1,27 @@
+apply plugin: "maven"
+task androidSourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier "sources"
+}
+artifacts {
+    archives androidSourcesJar
+}
+uploadArchives {
+    repositories.mavenDeployer {
+//        mavenDeployer {
+        print "------------------uploadArchives"
+            repository(url: "http://nexus.bcbook.cn:8081/repository/Android/") {
+                authentication(userName: "app", password: "app123456")
+            }
+        pom.project {
+            groupId = "cn.bcbook.primary.clickevent"
+            artifactId = "ClickEvent"
+            version = "1.0.0"
+        }
+//            pom.groupId = "com.dh.clickevent"
+//            pom.artifactId = "ClickEvent"
+//            pom.version = "1.0.0"
+//        }
+    }
+}
+

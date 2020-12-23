@@ -1,13 +1,9 @@
 package com.dh.clickevent.util;
 
 
-import com.dh.clickevent.ClickEventsManager;
-import com.dh.clickevent.bean.extra.BaseExtraBean;
-import com.dh.clickevent.type.ClickEventsExtraType;
 import com.dh.clickevent.type.ClickEventsViewType;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 public class TypeUtils {
@@ -24,10 +20,4 @@ public class TypeUtils {
         viewTypes.add(ClickEventsViewType.ConstraintLayout);
         return viewTypes;
     }
-
-    public static boolean isContainsExtraType(ClickEventsExtraType extraType){
-        HashMap<ClickEventsExtraType, BaseExtraBean> map = ClickEventsManager.getExtraTypeMap();
-        return map.containsKey(extraType);
-    }
-
 }

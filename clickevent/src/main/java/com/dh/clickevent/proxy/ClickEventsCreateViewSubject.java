@@ -206,10 +206,10 @@ public class ClickEventsCreateViewSubject implements ClickEventsViewSubject {
         } else {
             ClickEventsWholeType wholeType = (ClickEventsWholeType) type;
             switch (wholeType) {
-                case SCALE:
-                case RIPPLE:
                 case STATE:
                     return new EventStateAdapter(ClickEventsManager.getColorBean());
+                case SCALE:
+                case RIPPLE:
                 case RIPPLE_NORMAL:
             }
         }
